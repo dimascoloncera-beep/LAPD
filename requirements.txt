@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+matplotlib
+openpyxl
+scikit-learn
+joblib
+XGBoost
+xgboost
+folium
+branca
+jinja2
+
