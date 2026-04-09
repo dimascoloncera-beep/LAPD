@@ -142,8 +142,8 @@ file = st.sidebar.file_uploader("CSV o Excel", type=["csv", "xlsx", "xls"])
 st.sidebar.markdown("### 2) Configurar la aplicacion")
 hour = st.sidebar.selectbox("Hora (0–23)", list(range(24)), index=22)
 topk = st.sidebar.selectbox("Top N de delitos a observar", [3, 5, 8, 10], index=1)
-# --- min_n = st.sidebar.number_input("Mínimo N por área", min_value=1, value=50, step=10)
-# --- use_n_in_radius = st.sidebar.checkbox("Usar N en el tamaño del círculo", value=True)
+min_n = st.sidebar.number_input("Mínimo N registros por área", min_value=1, value=50, step=10)
+use_n_in_radius = st.sidebar.checkbox("Usar N en el tamaño del círculo", value=True)
 
 st.sidebar.write("")
 run_btn = st.sidebar.button("Entrenar el  modelo y generar resultados", type="primary", use_container_width=True)
@@ -209,10 +209,8 @@ with st.spinner("Generando mapa por área..."):
         hour_for_map=hour,
         col_area="area_nombre",
         topk=int(topk),
-        ### ---  min_n=int(min_n),
-         min_n=int(100),
-        ### --use_n_in_radius=use_n_in_radius
-        use_n_in_radius=5
+        min_n=int(min_n),       
+        use_n_in_radius=use_n_in_radius        
     )
 
 # etiqueta/metric arriba del mapa
