@@ -212,7 +212,7 @@ with st.spinner("Generando mapa por área..."):
         ### ---  min_n=int(min_n),
          min_n=int(100),
         ### --use_n_in_radius=use_n_in_radius
-        use_n_in_radius=10
+        use_n_in_radius=5
     )
 
 # etiqueta/metric arriba del mapa
