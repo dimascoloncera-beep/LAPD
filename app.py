@@ -131,22 +131,22 @@ def build_area_map(df, model, le, hour_for_map,
 # =========================
 # APP (LAYOUT SIDEBAR)
 # =========================
-st.set_page_config(page_title="Mapa de riesgo delictivo", layout="wide")
-st.markdown("## 🗺️ Modelo de Estudio del riesgo delictivo LPDA")
+st.set_page_config(page_title="Tesis:Análisis y visualización espacio-temporal del riesgo delictivo mediante aprendizaje automático ", layout="wide")  
+st.markdown("## 🗺️ Analisis y Visualizacion  del riesgo delictivo en Los Angeles, California")
 st.write("")
 
 # ---- SIDEBAR
-st.sidebar.markdown("### 1) Carga el archivo")
+st.sidebar.markdown("### 1) Cargar los datos")
 file = st.sidebar.file_uploader("CSV o Excel", type=["csv", "xlsx", "xls"])
 
-st.sidebar.markdown("### 2) Parámetriza")
+st.sidebar.markdown("### 2) Configurar la aplicacion")
 hour = st.sidebar.selectbox("Hora (0–23)", list(range(24)), index=22)
-topk = st.sidebar.selectbox("Top K en popup", [3, 5, 8, 10], index=1)
-min_n = st.sidebar.number_input("Mínimo N por área", min_value=1, value=50, step=10)
-use_n_in_radius = st.sidebar.checkbox("Usar N en el tamaño del círculo", value=True)
+topk = st.sidebar.selectbox("Top N de delitos a observar", [3, 5, 8, 10], index=1)
+# --- min_n = st.sidebar.number_input("Mínimo N por área", min_value=1, value=50, step=10)
+# --- use_n_in_radius = st.sidebar.checkbox("Usar N en el tamaño del círculo", value=True)
 
 st.sidebar.write("")
-run_btn = st.sidebar.button("Entrena el  modelo y genera resultados", type="primary", use_container_width=True)
+run_btn = st.sidebar.button("Entrenar el  modelo y generar resultados", type="primary", use_container_width=True)
 
 # ---- PANEL CENTRAL
 if file is None:
