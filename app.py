@@ -209,7 +209,8 @@ with st.spinner("Generando mapa por área..."):
         hour_for_map=hour,
         col_area="area_nombre",
         topk=int(topk),
-        min_n=int(min_n),
+        ###---  min_n=int(min_n),
+         min_n=int(100),
         use_n_in_radius=use_n_in_radius
     )
 
