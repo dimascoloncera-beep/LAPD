@@ -195,7 +195,7 @@ model = XGBClassifier(
     n_jobs=-1
 )
 
-with st.spinner("Entrenando modelo XGBoost..."):
+with st.spinner("Procesando los datos para obtener informacion"):
     model.fit(X_train, y_train)
 
 st.success(f"Modelo entrenado. Clases: {len(le.classes_)}")
