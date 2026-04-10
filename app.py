@@ -132,7 +132,7 @@ def build_area_map(df, model, le, hour_for_map,
 # APP (LAYOUT SIDEBAR)
 # =========================
 st.set_page_config(page_title="Tesis:Análisis y visualización espacio-temporal del riesgo delictivo mediante aprendizaje automático. ", layout="wide")  
-st.markdown("## 🗺️ Analisis y Visualizacion  del riesgo delictivo en Los Angeles, California.")
+st.markdown("## 🗺️ Análisis y Visualización  del riesgo delictivo en Los Angeles, California.")
 st.write("")
 
 # ---- SIDEBAR
